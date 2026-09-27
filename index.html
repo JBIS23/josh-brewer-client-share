@@ -1,111 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0d2b52">
-<title>Josh Brewer | Client Share</title>
-<style>
-:root{--navy:#0d2b52;--blue:#1760ad;--ink:#17243a;--muted:#607087;--line:#dfe5eb;--soft:#f6f7f8}
-*{box-sizing:border-box}
-body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-.hero{min-height:320px;background:linear-gradient(90deg,#0b1118 0%,#18202a 42%,#26303a 100%);overflow:hidden}
-.hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:320px}
-.hero-copy{padding:42px 34px;color:#fff;text-align:center}
-.signature{font-family:"Brush Script MT","Segoe Script",cursive;font-size:66px;line-height:.95;margin:0}
-.client{font-size:26px;letter-spacing:8px;margin-top:12px}
-.tag{font-size:15px;letter-spacing:4px;margin-top:28px;line-height:1.6}
-.hero-photo{height:320px;width:100%;object-fit:cover;object-position:center 30%}
-main{max-width:1180px;margin:auto;padding:28px 26px 46px}
-h1{text-align:center;font-family:Georgia,serif;color:var(--navy);font-size:42px;margin:0 0 8px}
-.intro{text-align:center;color:var(--muted);font-size:18px;line-height:1.45;max-width:780px;margin:0 auto 20px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#ddd;border-radius:14px;overflow:hidden;margin:18px 0 24px}
-.step{background:#f5f5f4;padding:18px;display:flex;gap:14px;align-items:center}
-.num{min-width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:20px}
-h2{font-family:Georgia,serif;color:var(--navy);font-size:29px;margin:25px 0 12px}
-.messages{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.message{border:1px solid var(--line);border-radius:12px;padding:18px;display:flex;flex-direction:column;min-height:190px;background:#fff}
-.message p{font-size:17px;line-height:1.45;margin:0 0 16px;flex:1}
-.copy{border:0;background:#eef4fb;color:var(--navy);border-radius:9px;padding:11px;font-weight:750;cursor:pointer}
-.copy:hover{background:#e3edf8}
-.photo-note{color:var(--muted);margin:-4px 0 14px}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.photo-card{position:relative;overflow:hidden;border-radius:12px;background:#ddd;aspect-ratio:1.55/1}
-.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
-.photo-card span{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;text-align:center;font-weight:800;letter-spacing:.4px}
-.placeholder{width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:18px;color:#fff;font-weight:800;background:linear-gradient(135deg,#3c5367,#8b6f50)}
-.actions{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
-.btn{display:block;text-align:center;text-decoration:none;padding:16px;border-radius:11px;font-size:17px;font-weight:800}
-.facebook{background:var(--blue);color:#fff}.secondary{border:1px solid #aab7c5;color:var(--navy);background:#fff}
-.thanks{text-align:center;font-family:"Brush Script MT","Segoe Script",cursive;color:var(--navy);font-size:38px;margin:34px 0 0}
-.phone{text-align:center;color:#758193;font-size:13px;margin-top:5px}
-@media(max-width:800px){
- .hero,.hero-inner{min-height:auto}.hero-inner{grid-template-columns:1fr}.hero-copy{padding:28px 20px}.signature{font-size:50px}.client{font-size:20px;letter-spacing:6px}.tag{margin-top:18px}.hero-photo{height:300px;object-position:center 28%}
- main{padding:22px 15px 38px}h1{font-size:34px}.intro{font-size:16px}.steps{grid-template-columns:1fr}.step{padding:13px 15px}
- .messages{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.actions{grid-template-columns:1fr}.thanks{font-size:31px}
-}
-@media(max-width:480px){.messages{grid-template-columns:1fr}.hero-photo{height:270px}}
-</style>
-</head>
-<body>
-<header class="hero">
- <div class="hero-inner">
-  <div class="hero-copy">
-   <div class="signature">Josh Brewer</div>
-   <div class="client">CLIENT SHARE</div>
-   <div class="tag">REAL PEOPLE. REAL STORIES.<br>THANK YOU.</div>
-  </div>
-  <img class="hero-photo" src="josh-brewer-headshot.jpg" alt="Josh Brewer">
- </div>
-</header>
-
-<main>
- <h1>Enjoyed Working With Me?</h1>
- <p class="intro">Your feedback means a lot. Would you take a moment to share your experience on Facebook? It helps others like you find someone they can trust.</p>
-
- <div class="steps">
-  <div class="step"><div class="num">1</div><div><b>Pick a message</b><br>that fits your experience.</div></div>
-  <div class="step"><div class="num">2</div><div><b>Choose a photo</b><br>that fits your story.</div></div>
-  <div class="step"><div class="num">3</div><div><b>Open Facebook</b><br>and post it on your page.</div></div>
- </div>
-
- <h2>1. Choose a Message</h2>
- <div class="messages">
-  <div class="message"><p id="m1">Josh made the process simple and straightforward. Highly recommend!</p><button class="copy" onclick="copyMsg('m1',this)">Copy Message</button></div>
-  <div class="message"><p id="m2">Great experience working with Josh. He's knowledgeable, responsive, and easy to work with.</p><button class="copy" onclick="copyMsg('m2',this)">Copy Message</button></div>
-  <div class="message"><p id="m3">Josh took the time to explain everything and made sure we had the right coverage for our needs.</p><button class="copy" onclick="copyMsg('m3',this)">Copy Message</button></div>
-  <div class="message"><p id="m4">Professional, honest, and genuinely cares about his clients. We're grateful for his help!</p><button class="copy" onclick="copyMsg('m4',this)">Copy Message</button></div>
- </div>
-
- <h2>2. Choose a Photo</h2>
- <p class="photo-note">Pick a photo that fits your story and use it with your message. The image tiles below are ready for the individual share photos we’re adding.</p>
- <div class="gallery">
-  <div class="photo-card"><div class="placeholder">HOME</div><span>HOME</span></div>
-  <div class="photo-card"><div class="placeholder">AUTO</div><span>AUTO</span></div>
-  <div class="photo-card"><div class="placeholder">FAMILY</div><span>FAMILY</span></div>
-  <div class="photo-card"><div class="placeholder">TEXAS / LOCAL</div><span>TEXAS / LOCAL</span></div>
-  <div class="photo-card"><div class="placeholder">LIFE</div><span>LIFE</span></div>
-  <div class="photo-card"><div class="placeholder">PEACE OF MIND</div><span>PEACE OF MIND</span></div>
-  <div class="photo-card"><div class="placeholder">ON THE ROAD</div><span>ON THE ROAD</span></div>
-  <div class="photo-card"><div class="placeholder">COMMUNITY / OUTDOORS</div><span>COMMUNITY / OUTDOORS</span></div>
- </div>
-
- <div class="actions">
-  <a class="btn facebook" href="https://url.us.m.mimecastprotect.com/s/ESmJCOY9zMhkVD28IEfBBiGYyXv?domain=facebook.com" target="_blank" rel="noopener">Open Facebook to Post</a>
-  <a class="btn secondary" href="sms:9035178318">Text Josh</a>
- </div>
-
- <div class="thanks">Thank you for your support!</div>
- <div class="phone">Josh Brewer · 903-517-8318</div>
-</main>
-
-<script>
-async function copyMsg(id,button){
- const text=document.getElementById(id).innerText;
- try{await navigator.clipboard.writeText(text)}
- catch(e){const t=document.createElement("textarea");t.value=text;document.body.appendChild(t);t.select();document.execCommand("copy");t.remove()}
- const old=button.innerText;button.innerText="Copied ✓";setTimeout(()=>button.innerText=old,1500);
-}
-</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Josh Brewer | Client Share</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#14284a;background:#fff}
+.hero{background:#10161d;color:white;display:flex;min-height:310px;align-items:center;justify-content:center;overflow:hidden}.heroText{width:50%;text-align:center;padding:25px}
+.heroText h1{font-family:"Brush Script MT","Segoe Script",cursive;font-size:58px;margin:0;font-weight:400}.heroText p{letter-spacing:6px;font-size:18px}
+.hero img{width:50%;height:310px;object-fit:cover;object-position:center 30%}main{max-width:1120px;margin:auto;padding:28px 20px 45px}
+h2{font-family:Georgia,serif;font-size:30px;margin:25px 0 12px}.intro{text-align:center}.intro h2{font-size:40px;margin:0 0 8px}.intro p{font-size:17px;color:#52627a}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.step{background:#f3f4f5;padding:15px;border-radius:10px;text-align:center}
+.messages{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.msg{border:1px solid #d7dde5;border-radius:10px;padding:15px;display:flex;flex-direction:column}
+.msg p{flex:1;line-height:1.45}button,.save,.fb{border:0;border-radius:8px;padding:11px 13px;font-weight:750;text-decoration:none;text-align:center;cursor:pointer}
+button,.save{background:#eef4fb;color:#123a73}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.photo-card{border:1px solid #dde2e8;border-radius:12px;overflow:hidden;background:#fff;padding-bottom:10px}
+.photo-card img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}.label{font-weight:800;text-align:center;padding:9px 5px 7px}.save{display:block;margin:0 10px}.fb{display:block;background:#1760ad;color:#fff;margin:28px auto 0;max-width:520px;padding:16px}
+.thanks{text-align:center;font-family:"Brush Script MT","Segoe Script",cursive;font-size:36px;margin-top:32px}.phone{text-align:center;color:#69768a}
+@media(max-width:760px){.hero{display:block}.heroText,.hero img{width:100%}.heroText{padding:24px 12px}.heroText h1{font-size:48px}.hero img{height:290px}.messages,.gallery{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:450px){.messages{grid-template-columns:1fr}}
+</style></head><body>
+<section class="hero"><div class="heroText"><h1>Josh Brewer</h1><p>CLIENT SHARE</p><div>REAL PEOPLE. REAL STORIES.<br>THANK YOU.</div></div><img src="josh-brewer-headshot.jpg" alt="Josh Brewer"></section>
+<main><div class="intro"><h2>Enjoyed Working With Me?</h2><p>Your feedback means a lot. Would you take a moment to share your experience on Facebook? It helps others like you find someone they can trust.</p></div>
+<div class="steps"><div class="step"><b>1. Pick a message</b><br>that fits your experience.</div><div class="step"><b>2. Choose a photo</b><br>that fits your story.</div><div class="step"><b>3. Open Facebook</b><br>and post it on your page.</div></div>
+<h2>1. Choose a Message</h2><div class="messages">
+<div class="msg"><p id="m1">Josh made the process simple and straightforward. Highly recommend!</p><button onclick="cp('m1',this)">Copy Message</button></div>
+<div class="msg"><p id="m2">Great experience working with Josh. He's knowledgeable, responsive, and easy to work with.</p><button onclick="cp('m2',this)">Copy Message</button></div>
+<div class="msg"><p id="m3">Josh took the time to explain everything and made sure we had the right coverage for our needs.</p><button onclick="cp('m3',this)">Copy Message</button></div>
+<div class="msg"><p id="m4">Professional, honest, and genuinely cares about his clients. We're grateful for his help!</p><button onclick="cp('m4',this)">Copy Message</button></div></div>
+<h2>2. Choose a Photo</h2><p>Tap <b>Save Photo</b> under the image you want, then add it to your Facebook post.</p>
+<div class="gallery"><div class="photo-card"><img src="share-home.jpg" alt="HOME"><div class="label">HOME</div><a class="save" href="share-home.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-auto.jpg" alt="AUTO"><div class="label">AUTO</div><a class="save" href="share-auto.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-family.jpg" alt="FAMILY"><div class="label">FAMILY</div><a class="save" href="share-family.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-texas-local.jpg" alt="TEXAS / LOCAL"><div class="label">TEXAS / LOCAL</div><a class="save" href="share-texas-local.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-life.jpg" alt="LIFE"><div class="label">LIFE</div><a class="save" href="share-life.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-peace-of-mind.jpg" alt="PEACE OF MIND"><div class="label">PEACE OF MIND</div><a class="save" href="share-peace-of-mind.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-on-the-road.jpg" alt="ON THE ROAD"><div class="label">ON THE ROAD</div><a class="save" href="share-on-the-road.jpg" download>Save Photo</a></div>
+<div class="photo-card"><img src="share-community.jpg" alt="COMMUNITY"><div class="label">COMMUNITY</div><a class="save" href="share-community.jpg" download>Save Photo</a></div></div>
+<a class="fb" href="https://www.facebook.com/" target="_blank" rel="noopener">Open Facebook to Post</a>
+<div class="thanks">Thank you for your support!</div><div class="phone">Josh Brewer · 903-517-8318</div></main>
+<script>async function cp(id,b){let t=document.getElementById(id).innerText;try{await navigator.clipboard.writeText(t)}catch(e){let a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove()}let x=b.innerText;b.innerText='Copied ✓';setTimeout(()=>b.innerText=x,1400)}</script>
+</body></html>
